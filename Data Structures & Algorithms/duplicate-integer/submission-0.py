@@ -1,0 +1,9 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        num_map = {}
+        for num in nums:
+            if num_map.get(num) is not None:
+                return True
+            else:
+                num_map[num] = 1
+        return False
